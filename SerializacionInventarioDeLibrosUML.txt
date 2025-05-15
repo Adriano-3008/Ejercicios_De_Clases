@@ -1,0 +1,20 @@
+@startuml
+class Libros{
+-serialVersionUID:long
+-titulo:String
+-autor:String
+-año:int
++Libros(titulo:String, autor:String, año:int)
++getTitulo():String
++getAutor():String
++getAño():int
++serializarLibros(libros:ArrayList<Libros>, archivo:String):void
++deserializarLibros(archivo:String):ArrayList<Libros>
+}
+
+class SerializacionInventarioDeLibros{
++main(String[] args):void
+}
+
+Libros --o SerializacionInventarioDeLibros
+@enduml
